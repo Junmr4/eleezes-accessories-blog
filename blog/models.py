@@ -9,11 +9,11 @@ class Post(models.Model):
     body = models.TextField()                                                 
     created_at = models.DateTimeField('Datetime created') 
     def __unicode__(self):
-    	return self.title                                   
+    	return self.title                               
                                                                                           
                                                                                           
 class Comment(models.Model):                                                                   
-    post = models.ForeignKey(Post)                                                             
+    post = models.OneToOneField(Post)                                                             
     message = models.TextField()                                                               
     created_at = models.DateTimeField('Datetime created')
     def __unicode__(self):
