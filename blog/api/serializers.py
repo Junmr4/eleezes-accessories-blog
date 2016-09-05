@@ -4,11 +4,10 @@ from blog.models import Post, Comment
 class PostModelSerializer(ModelSerializer):
 	class Meta:
 		model = Post
-		fields = ('id','title','body')
+		fields = '__all__'
 
 
 class CommentModelSerializer(ModelSerializer):
 	class Meta:
 		model = Comment
-		fields = ('id','message')
-
+		fields = '__all__'

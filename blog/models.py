@@ -13,7 +13,7 @@ class Post(models.Model):
                                                                                           
                                                                                           
 class Comment(models.Model):                                                                   
-    post = models.OneToOneField(Post)                                                             
+    post = models.ForeignKey(Post)                                                             
     message = models.TextField()                                                               
     created_at = models.DateTimeField('Datetime created')
     def __unicode__(self):
