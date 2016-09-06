@@ -5,9 +5,11 @@ from django.utils import timezone
 
 
 class Post(models.Model):                                                                      
-    title = models.CharField(max_length=256)
+    title = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()                                                 
     created_at = models.DateTimeField('Datetime created') 
+
     def __unicode__(self):
     	return self.title                               
                                                                                           
