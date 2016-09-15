@@ -16,9 +16,12 @@ Including another URLconf
 from blog.api import views 
 from django.conf.urls import url, include
 from django.contrib import admin
+from blog.views import index
+from django.views.generic.base import TemplateView
  
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', TemplateView.as_view(template_name="base.html"), name='base'),
     url(r'^api/blog/v1/', include(r'blog.api.urls'))
 ]
