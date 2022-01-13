@@ -4,7 +4,7 @@ django-extensions==1.7.3
 djangorestframework==3.4.6
 graphviz==0.4.10
 itypes==1.1.0
-Pillow==3.3.1
+Pillow==9.0.0
 postgres==2.2.1
 psycopg2==2.6.2
 requests==2.11.1
